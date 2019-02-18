@@ -1,0 +1,34 @@
+.contentBar{
+	width: 80%;
+	margin:auto;
+	margin-top: 20px;
+}
+.leftSideNav{
+	float:left;
+	width: 200px;
+	margin-right: 20px;
+}
+.leftSideNav table{
+	width: 200px;
+	box-shadow:#ccc 5px 5px 5px;
+}
+.leftSideNav table tbody tr{
+	background-color: #fff;
+}
+.leftSideNav table tbody th{
+	background-color: #aeaeae;
+}
+.leftSideNav table tr{
+	width:200px;
+	height:60px;
+	text-align: center;
+}
+.leftSideNav table tbody tr a{
+	display: block;
+	width: 200px;
+	height:60px;
+	line-height: 60px;
+}
+.leftSideNav table tbody tr a:hover{
+	background-color:#ccc;
+}

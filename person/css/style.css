@@ -1,0 +1,28 @@
+/*
+* 主内容
+*/
+.contentBar{
+	width: 80%;
+	margin:auto;
+	margin-top: 20px;
+}
+.contents table tbody tr{
+	display: block;
+	margin-bottom: 10px;
+	background-color: #fff;
+	box-shadow: 5px 5px 5px #ccc;
+}
+.contents table tbody tr td{
+	padding: 14px 30px 14px 30px;
+}
+.contents .zuozhe{
+	text-indent: 50px;
+}
+.contents .content{
+	text-indent: 20px;
+}
+.contents .info span{
+	color: #aaa	;
+	font-size: 10px;
+	padding-left: 20px;
+}
