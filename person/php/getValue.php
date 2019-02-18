@@ -13,6 +13,7 @@
 		$result = mysqli_query($conn,$sql);
 		if($result){
 			echo "注册成功";
+			echo "<meta http-equiv=refresh content=0;url=\"../index.php\">";
 		}else{
 			echo "注册失败:";
 		}

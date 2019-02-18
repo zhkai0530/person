@@ -2,10 +2,19 @@
 		<div class="headTop head">
 			<div class="logIn clearfix">
 				<ul>
-					<li><a href="login.php">登录</a></li>
+					<?php
+					session_start();
+					if($_SESSION['is_user_logged_in']){
+						echo "<li><a href=\"login.php\">".$_SESSION['nickName']."</a></li>
 					<li> | </li>
-					<li><a href="register.php">注册</a></li>
-					<li class="headpro"><a href="login.php"></a></li>
+					<li><a href=\"register.php\">注销</a></li>
+					<li class=\"headpro\"><a href=\"login.php\"></a></li>";
+					}else{
+					echo "<li><a href=\"login.php\">登录</a></li>
+					<li> | </li>
+					<li><a href=\"register.php\">注册</a></li>
+					<li class=\"headpro\"><a href=\"login.php\"></a></li>";}
+					?>
 				</ul>
 			</div>
 		</div>
