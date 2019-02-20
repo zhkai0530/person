@@ -22,4 +22,5 @@
 			$_SESSION['is_user_logged_in'] = 0;
 		}
 	}
+	echo "测试sublime git";
  ?>
