@@ -6,7 +6,6 @@
 	<link rel="stylesheet" type="text/css" href="css/login.css">
 	<link rel="stylesheet" type="text/css" href="css/register.css">
 	<link rel="stylesheet" type="text/css" href="css/footer.css">
-	<? include "php/login.php"; ?>
 </head>
 <body>
 <?php include "Template/head.php" ?>
