@@ -1,4 +1,5 @@
 <?php 
+session_start();
 	class Login {
 		public $user;
 		public $pwd;
@@ -27,7 +28,7 @@
 			$result = mysqli_query($conn,$sql);
 			if(!$result)
 			{
-				echo "<script>alert(\"用户名错误\");history.go(-1);</script>";
+				echo "<script>alert('连接错误，请稍后尝试。')history.go(-1);</script>";
 				exit();
 			}else{
 				if(mysqli_num_rows($result) <= 0){
@@ -36,13 +37,16 @@
 				}else{
 					while ($row = mysqli_fetch_array($result)) 
 					{
-						if($row['phone'] === $this->user or $row['email'] === $this->user)
+						if($row['phone'] = $this->user or $row['email'] = $this->user)
 						{
-							if($row["password"] === $this->pwd)
+							if($row["password"] = $this->pwd)
 							{
-								echo $row['name'];
+								// echo $row['name'];
+								$_SESSION['is_user_logged_in'] = true;
+								$_SESSION['nickName'] = $row['nickName'];
+								echo "<script>location.href = 'http://localhost/www/git-person/person/index.php';</script>";
 							}else{
-								echo "<script>alert(\"密码错误\");history.go(-1);</script>";
+								echo "<script>alert(\"密码错误\");location.href = 'http://localhost/www/git-person/person/index.php';</script>";
 								exit();
 							}
 						}
