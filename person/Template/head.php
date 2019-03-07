@@ -4,16 +4,25 @@
 				<ul>
 					<?php
 					session_start();
-					if($_SESSION['is_user_logged_in']){
-						echo "<li><a href=\"login.php\">".$_SESSION['nickName']."</a></li>
-					<li> | </li>
-					<li><a href=\"php/cancell.php\">注销</a></li>
-					<li class=\"headpro\"><a href=\"login.php\"></a></li>";
+					if(isset($_SESSION['is_user_logged_in'])){
+						if($_SESSION['is_user_logged_in']){
+							echo "<li><a href=\"login.php\">".$_SESSION['nickName']."</a></li>
+							<li> | </li>
+							<li><a href=\"php/cancell.php\">注销</a></li>
+							<li class=\"headpro\"><a href=\"login.php\"></a></li>";
+						}else{
+							echo "<li><a href=\"login.php\">登录</a></li>
+							<li> | </li>
+							<li><a href=\"register.php\">注册</a></li>
+							<li class=\"headpro\"><a href=\"login.php\"></a></li>";
+						}
 					}else{
-					echo "<li><a href=\"login.php\">登录</a></li>
-					<li> | </li>
-					<li><a href=\"register.php\">注册</a></li>
-					<li class=\"headpro\"><a href=\"login.php\"></a></li>";}
+						echo "<li><a href=\"login.php\">登录</a></li>
+						<li> | </li>
+						<li><a href=\"register.php\">注册</a></li>
+						<li class=\"headpro\"><a href=\"login.php\"></a></li>";
+					}
+					
 					?>
 				</ul>
 			</div>
