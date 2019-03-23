@@ -1,0 +1,32 @@
+.movedown{
+	animation: movedown .5s ease;
+	-webkit-animation: movedown .5s ease;
+}
+@keyframes movedown{
+	from {top:-356px;}
+	60% {top:0;}
+	70% {top:-60px;}
+	80% {top:0px;}
+	90% {top:-10px;}
+	to {top:0;}
+}
+@-webkit-keyframes movedown{
+	from {top:-356px;}
+	60% {top:0;}
+	70% {top:-60px;}
+	80% {top:0px;}
+	90% {top:-10px;}
+	to {top:0;}
+}
+.moveup{
+	animation: moveup .5s ease;
+	-webkit-animation: moveup .5s ease;
+}
+@keyframes moveup{
+	from {top:0;}
+	to {top:-356px;}
+}
+@-webkit-keyframes moveup{
+	from {top:0;}
+	to {top:-356px;}
+}
