@@ -1,28 +1,33 @@
 /*
 * 主内容
 */
+html{
+	font-size: 20px;
+}
 .contentBar{
 	width: 80%;
 	margin:auto;
-	margin-top: 20px;
+	margin-top: 1rem;
 }
 .contents table tbody tr{
 	display: block;
 	margin-bottom: 10px;
 	background-color: #fff;
-	box-shadow: 5px 5px 5px #ccc;
+	box-shadow: 0.25rem 0.25rem 0.25rem #ccc;
 }
 .contents table tbody tr td{
-	padding: 14px 30px 14px 30px;
+	padding: 0.7rem 1.5rem 0.7rem 1.5rem;
 }
 .contents .zuozhe{
-	text-indent: 50px;
+	text-indent: 2.5rem;
+	font-size: 0.9rem;
 }
 .contents .content{
-	text-indent: 20px;
+	text-indent: 1rem;
+	font-size: 0.8rem;
 }
 .contents .info span{
 	color: #aaa	;
-	font-size: 10px;
-	padding-left: 20px;
+	padding-left: 1rem;
+	font-size: 0.6rem;
 }
