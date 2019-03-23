@@ -1,16 +1,16 @@
 .contentBar{
 	width: 80%;
 	margin:auto;
-	margin-top: 20px;
+	margin-top: 1rem;
 }
 .leftSideNav{
 	float:left;
-	width: 200px;
-	margin-right: 20px;
+	width: 10rem;
+	margin-right: 1rem;
 }
 .leftSideNav table{
-	width: 200px;
-	box-shadow:#ccc 5px 5px 5px;
+	width: 10rem;
+	box-shadow:#ccc 0.25rem 0.25rem 0.25rem;
 }
 .leftSideNav table tbody tr{
 	background-color: #fff;
@@ -19,15 +19,16 @@
 	background-color: #aeaeae;
 }
 .leftSideNav table tr{
-	width:200px;
-	height:60px;
+	width:10rem;
+	height:3rem;
 	text-align: center;
 }
 .leftSideNav table tbody tr a{
 	display: block;
-	width: 200px;
-	height:60px;
-	line-height: 60px;
+	width: 10rem;
+	height:3rem;
+	line-height: 3rem;
+	font-size: 0.8rem;
 }
 .leftSideNav table tbody tr a:hover{
 	background-color:#ccc;
