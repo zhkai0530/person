@@ -1,12 +1,12 @@
 /*頁尾*/
 .footerBar{
 	width: 100%;
-	height:86px;
-	margin-top: 60px;
+	height:4.3rem;
+	margin-top: 3rem;
 	background-color: #ccc;
-	border-top-left-radius: 10px;
+	border-top-left-radius: 0.5rem;
 	border-top-right-radius: 50%;
-	padding-top:14px;
+	padding-top:0.75rem;
 }
 .footer{
 	width: 80%;
@@ -20,5 +20,8 @@
 .friendLink ul li{
 	display: inline;
 	float: left;
-	margin-right: 20px;
+	margin-right: 1rem;
+}
+.friendLink ul li a,.registerInfo,.anyOne{
+	font-size: 0.8rem;
 }
