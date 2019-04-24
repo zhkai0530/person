@@ -13,7 +13,7 @@ session_start();
 			if(!trim($this->pwd)==""){
 				$strlen = strlen($this->pwd);
 				if($strlen>20 || $strlen<6){
-					echo "<script>alert('您的密码长度错误，请再试一次。');history.go(-1);</script>";
+					echo "<script>alert('您的密码长度错误，请再试一次。');history.go();</script>";
 					exit();
 				}else{
 					$this->pwd = md5($this->pwd);
@@ -24,7 +24,7 @@ session_start();
 		function checkuser (){
 			$conn = new mysqli(DB_HOST,DB_USER,DB_PWD,DB_NAME) or die("数据库连接失败");
 			mysqli_query($conn,"set names utf8");
-			$sql = "select * from personinfo where phone='".$this->user."' or email='".$this->user."'";
+			$sql = "select * from userinfo where phone='".$this->user."' or email='".$this->user."'";
 			$result = mysqli_query($conn,$sql);
 			if(!$result)
 			{
@@ -37,13 +37,14 @@ session_start();
 				}else{
 					while ($row = mysqli_fetch_array($result)) 
 					{
-						if($row['phone'] = $this->user or $row['email'] = $this->user)
+						if($row['phone'] == $this->user or $row['email'] == $this->user)
 						{
-							if($row["password"] = $this->pwd)
+							if($row["password"] == $this->pwd)
 							{
-								// echo $row['name'];
-								$_SESSION['is_user_logged_in'] = true;
-								$_SESSION['nickName'] = $row['nickName'];
+								$_SESSION['is_user_logged_in'] = true;//用于判断用户是否登录
+								$_SESSION['nickName'] = $row['nickname'];//用于保存登录用户昵称
+								$_SESSION['id'] = $row['ID'];//用于保存登录用户ID
+								$_SESSION['name'] = $row['name'];//用于保存登录用户姓名
 								echo "<script>location.href = 'http://localhost/www/git-person/person/index.php';</script>";
 							}else{
 								echo "<script>alert(\"密码错误\");location.href = 'http://localhost/www/git-person/person/index.php';</script>";
