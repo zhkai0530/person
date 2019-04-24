@@ -1,43 +1,17 @@
-<header>
-		<div class="headTop head">
-			<div class="logIn clearfix">
-				<ul>
-					<?php
-					session_start();
-					if(isset($_SESSION['is_user_logged_in'])){
-						if($_SESSION['is_user_logged_in']){
-							echo "<li><a href=\"login.php\">".$_SESSION['nickName']."</a></li>
-							<li> | </li>
-							<li><a href=\"php/cancell.php\">注销</a></li>
-							<li class=\"headpro\"><a href=\"login.php\"></a></li>";
-						}else{
-							echo "<li><a href=\"login.php\">登录</a></li>
-							<li> | </li>
-							<li><a href=\"register.php\">注册</a></li>
-							<li class=\"headpro\"><a href=\"login.php\"></a></li>";
-						}
-					}else{
-						echo "<li><a href=\"login.php\">登录</a></li>
-						<li> | </li>
-						<li><a href=\"register.php\">注册</a></li>
-						<li class=\"headpro\"><a href=\"login.php\"></a></li>";
-					}
-					
-					?>
-				</ul>
-			</div>
-		</div>
-	</header>
-	<nav class="navBar">
-		<div class="navTop head">
-			<div class="nav clearfix">
-				<div class="logo"><a href="index.html">KAI'S ROOM</a></div>
-				<ul>
-					<li><a href="index.php">首页</a></li>
-					<li><a href="blog.php">博客</a></li>
-					<li><a href="msg.php">信息</a></li>
-					<li><a href="#">预留</a></li>
-				</ul>
-			</div>
-		</div>
-	</nav>
+<head>
+	<meta charset="UTF-8">
+	<META HTTP-EQUIV="pragma" CONTENT="no-cache"> 
+	<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate"> 
+	<META HTTP-EQUIV="expires" CONTENT="0">
+	<title>技术论坛</title>
+	<link rel="stylesheet" href="css/register.css">
+	<link rel="stylesheet" href="css/animation.css">
+	<link rel="stylesheet" href="css/login.css">
+	<link rel="stylesheet" type="text/css" href="css/head.css">
+	<link rel="stylesheet" type="text/css" href="css/leftsidebar.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/footer.css">
+	<script type="text/javascript" src="js/head.js"></script>
+	<!-- <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.2/??flexible_css.js,flexible.js"
+></script> -->
+</head>
