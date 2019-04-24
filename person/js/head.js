@@ -1,4 +1,31 @@
 window.onload = function(){
+	//根据窗口大小改变根字体大小，实现响应式
+	(function(){
+		var defaultScreenWidth = 1920;	
+		function setFontSize(){
+			var nowScreenWidth = window.document.documentElement.getBoundingClientRect().width;
+			if(nowScreenWidth<=defaultScreenWidth){
+				var baseSize = nowScreenWidth / defaultScreenWidth;
+				// return baseSize;
+				if(nowScreenWidth<=980){
+					window.document.documentElement.style.fontSize = 18 + "px";
+					var doc = document.getElementsByClassName("subInfoBox")[0];
+					var lable = document.getElementsByTagName("label");
+					for(var i = 0;i < lable.length;i++){
+						console.log(lable[i])
+						lable[i].remove();
+					}
+				}else{
+					window.document.documentElement.style.fontSize = (20 * baseSize) + "px";
+				}
+			}
+		}
+		setFontSize();
+		window.onresize = function(){
+			setFontSize();
+		}
+	})();
+
 	//监听页面滚动，导航栏置顶
 	(function(){
 		var navBar = document.getElementsByClassName("navBar");
@@ -10,22 +37,6 @@ window.onload = function(){
 				navBar[0].style.cssText = "position:normal";
 			}
 		}
-	})();
-
-	//不同页面的导航显示不同样式
-	(function(){
-		var url = window.location.pathname.split('?')[0].split('/').pop(),
-			links = document.querySelector('nav').getElementsByTagName('ul')[0].getElementsByTagName('a'),
-			index = 0;
-		if(url){
-			for(var i = 0;i<url.length;i++){
-				if(links[i].href.indexOf(url) !== -1){
-					index = i;
-					break;
-				}
-			}
-		}
-		links[index].style.color = "#aeaeae";
 	})();
 
 	//显示/隐藏登录和注册页面
